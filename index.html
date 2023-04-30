@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Control Finance</title>
+</head>
+
+<body>
+    <header>
+        <section class="content-header"> 
+            <nav class="nav-header">
+                <i class="material-icons perfil" style="font-size: 30px;">account_circle</i>
+                <select name="" class="select-mes">
+                    <option class="jan" value="Jan">Jan</option>
+                    <option class="fev" value="Fev">Fev</option>
+                    <option class="mar" value="Mar">Mar</option>
+                    <option class="abr" value="Abr">Abr</option>
+                    <option class="mai" value="Mai">Mai</option>
+                    <option class="jun" value="Jun">Jun</option>
+                    <option class="jul" value="Jul">Jul</option>
+                    <option class="ago" value="Ago">Ago</option>
+                    <option class="set" value="Set">Set</option>
+                    <option class="out" value="Out">Out</option>
+                    <option class="nov" value="Nov">Nov</option>
+                    <option class="dez" value="Dez">Dez</option>
+                </select>
+                <i class="material-icons money" style="font-size: 30px;">money</i>
+            </nav>
+            <nav class="conta-nav">
+                <div class="nav-saldo-conta">
+                    <small class="valor-saldo small-saldo">Saldo em conta</small>
+                    <div class="total"></div>
+                </div>
+                <div class="nav-receita-despesa">
+                    <div class="nav-receita">
+                        <div class="nav-icon1">
+                            <i class="material-icons north" style="font-size: 15px;">north</i>
+                        </div>
+                        <div class="nav-receita-valor">
+                            <small>Receita</small>
+
+                            <div class="positivo"></div>
+                        </div>
+                    </div>
+                    <div class="nav-despesa">
+                        <div class="nav-icon2">
+                            <i class="material-icons south" style="font-size: 15px;">south</i>
+                        </div>
+                        <div class="nav-despesa-valor">
+                            <small>Despesa</small>
+                            <div class="negativo"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <!-- <form action="">
+        <label for="">nome</label>
+        <input type="text" name="" class="nome">
+        <label for="">valor</label>
+        <input type="number" class="valor">
+        <select name="" id="" class="select-type">
+            <option value="">opcao</option>
+            <option value="-">Despesa</option>
+            <option value="+">Receita</option>
+        </select>
+        <input type="button" value="adicionar" class="btn">
+    </form> -->
+    <main class="container">
+        <div class="content-list">
+            <div class="content-title">
+                <h4>Transações</h4>
+            </div>
+            
+            <ul class="listas-li"></ul>
+        </div>
+        
+        <div class="content-form">
+            <section class="title-form">
+                <h4>Adicionar Transação</h4>
+            </section>
+            <form action="" class="content-inputs">
+                <div class="nome-input">
+                    <label for=""class="nome">Nome: </label>
+                    <input type="text" name="" class="nome nome1">
+                </div>
+                <div class="valor-input">
+                    <label for=""class="valor">Valor:</label>
+                    <input type="text" name="" class="valor valor1">
+                </div>
+                <div class="mes-select">
+                    <span>Selecione o mes: </span>
+                    <select class="select-form">
+                        <option value="Jan">Jan</option>
+                        <option value="Fev">Fev</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Abr">Abr</option>
+                        <option value="Mai">Mai</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Ago">Ago</option>
+                        <option value="Set">Set</option>
+                        <option value="Out">Out</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dez">Dez</option>
+                    </select>
+                </div>
+                
+                <div class="check-input">
+                    <label >Escolha o tipo: </label>
+                    <select name="" class="select-rd">
+                        <option value="-">Despesa</option>
+                        <option value="">Receita</option>
+                    </select>
+                </div>
+                <div class="content-btn">
+                    <input type="button" value="Enviar" class="btn">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+        firebase.initializeApp(firebaseConfig = {
+            apiKey: "AIzaSyAdUb3gXg_fwut557A2YMjd3QuO8Fgc6gM",
+            authDomain: "controle-financeiro-d8b8b.firebaseapp.com",
+            projectId: "controle-financeiro-d8b8b",
+            storageBucket: "controle-financeiro-d8b8b.appspot.com",
+            messagingSenderId: "86296995908",
+            appId: "1:86296995908:web:d986784c87227a5b4a7411"
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
