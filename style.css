@@ -266,7 +266,7 @@ div .btn{
     background-color: rgb(176, 176, 231);
 }
 
-@media (max-width: 414px) {
+@media (max-width: 914px) {
     
     header{
         border-radius: 15px;
